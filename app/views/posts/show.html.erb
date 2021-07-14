@@ -3,6 +3,14 @@
 <p>
   <h3>Name:</h3>
   <%= @post.name %>
+  <%= @post.content %>
+
+  <h3>Tags:</h3>
+  <% if @post.tags!= nil %>
+    <% @post.tags.each do |tag| %>
+      <%= tag.name %> <br>
+    <% end %>
+  <% end %>
 </p>
 
 
